@@ -1,0 +1,46 @@
+@import "styles/variables";
+
+.form {
+  width: 100%;
+
+  & button {
+    margin-top: $gutter * 2;
+    margin-left: auto;
+    display: flex;
+  }
+}
+
+.formControl{
+  & + & {
+    margin-top: $gutter;
+  }
+}
+
+.input {
+  width: 100%;
+  height: $finger-size;
+  border-radius: 3px;
+  border: 1px solid #333;
+  background: #111;
+  color: $c-text;
+  padding-left: $half-gutter;
+  padding-right: $half-gutter;
+}
+
+.textarea {
+  width: 100%;
+  min-height: $finger-size * 2;
+
+  & textarea {
+    resize: none;
+    width: inherit;
+    min-height: inherit;
+    border-radius: 3px;
+    border: 1px solid #333;
+    background: #111;
+    color: $c-text;
+    padding-left: $half-gutter;
+    padding-right: $half-gutter;
+    padding-top: $half-gutter;
+  }
+}

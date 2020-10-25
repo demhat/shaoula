@@ -1,0 +1,68 @@
+@import "styles/variables.scss";
+@import "styles/mixin.scss";
+@import "components/buttons/style.module";
+
+
+.navbar {
+  background: rgba($c-theme, .5);
+  backdrop-filter: blur(5px) saturate(180%);
+  color: $c-text;
+  width: 100%;
+  height: $finger-size * 2;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  margin-bottom: $gutter * 2;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include mq() {
+
+    }
+  }
+}
+
+.nav {
+  align-items: center;
+  height: $finger-size;
+  display: none;
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.drawer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 999px;
+  top: 0;
+  padding: $gutter;
+  background: rgba($c-theme, .75);
+  backdrop-filter: blur(5px) saturate(180%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .5s all;
+}
+
+.drawerActive {
+  left: 0;
+}
+
+.drawerNav {
+  & a {
+    width: 100%;
+    font-weight: bold;
+    margin-top: $gutter;
+    font-size: 1.25rem;
+  }
+}
+
+.drawerCross {
+  margin-left: auto;
+}

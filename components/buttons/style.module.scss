@@ -1,0 +1,52 @@
+@import "styles/variables";
+
+.button {
+  padding: 10px 20px;
+  background: $c-primary;
+  border-radius: 7px;
+  color: $c-text;
+  font-weight: bold;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkButton {
+  background: transparent;
+  color: $c-link;
+  height: $finger-size;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  font-weight: normal;
+  transition: .3s all;
+
+  &.active {
+    color: red;
+    font-weight: bold;
+  }
+
+  &:hover {
+    color: lighten($c-link, 10%);
+    transform: scale(1.1);
+  }
+}
+
+.primary {
+  background: $c-primary !important;
+  color: $c-text !important;
+}
+
+.iconButton {
+  width: $finger-size;
+  height: $finger-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 50%;
+  background: #111;
+  border: 1px solid #333;
+  cursor: pointer;
+  color: $c-text;
+}

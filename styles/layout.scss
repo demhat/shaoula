@@ -1,0 +1,157 @@
+@import "variables";
+@import "mixin";
+
+.container {
+  &,
+  &-fluid,
+  &-sm,
+  &-md,
+  &-lg,
+  &-fluid {
+    width: 100%;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &,
+  &-sm {
+    max-width: 540px;
+  }
+
+  &,
+  &-sm,
+  &-md {
+    @include mq("md") {
+      max-width: 720px;
+    }
+  }
+
+  &,
+  &-sm,
+  &-md,
+  &-lg {
+    @include mq("lg") {
+      max-width: 960px;
+    }
+  }
+
+  &,
+  &-sm,
+  &-md,
+  &-lg,
+  &-xl {
+    @include mq("lg") {
+      max-width: 960px;
+    }
+  }
+
+  &.centered {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: $gutter;
+  margin-right: $gutter;
+}
+
+.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+
+  & > .col,
+  & > [class^=".col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.col {
+  max-width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &,
+  [class*=".col-"] {
+    padding-left: $half-gutter;
+    padding-right: $half-gutter;
+  }
+
+  [class^="&-"] {
+    width: 100%;
+  }
+
+  &-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    @for $i from 1 to 13 {
+      &-#{$i} {
+        flex: 0 0 (100% / $i);
+        max-width: 100%;
+      }
+    }
+  }
+
+  &-md {
+    @include mq("md") {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    @for $i from 1 to 13 {
+      &-#{$i} {
+        @include mq("md") {
+          flex: 0 0 (100% / $i);
+          max-width: (100% / $i);
+        }
+      }
+    }
+  }
+
+  &-lg {
+    @include mq("lg") {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    @for $i from 1 to 13 {
+      &-#{$i} {
+        @include mq("lg") {
+          flex: 0 0 (100% / $i);
+          max-width: (100% / $i);
+        }
+      }
+    }
+  }
+
+  &-xl {
+    @include mq("xl") {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+    @for $i from 1 to 13 {
+      &-#{$i} {
+        @include mq("xl") {
+          flex: 0 0 (100% / $i);
+          max-width: (100% / $i);
+        }
+      }
+    }
+  }
+}
+
+[class*="col-"] {
+  padding-left: $half-gutter / 2;
+  padding-right: $half-gutter / 2;
+}

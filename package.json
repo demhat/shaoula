@@ -1,0 +1,29 @@
+{
+  "name": "shaoula",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "svgr": "svgr icons --out-dir components/icons --icon --no-prettier --svg-props \"width=24,height=24\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-typist": "^2.0.5",
+    "sass": "^1.27.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@svgr/cli": "^5.4.0",
+    "prettier": "^2.1.2",
+    "react-is": "^17.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+@import "styles/variables";
+
+.card {
+  min-width: 286px;
+  max-width: 100%;
+  width: 100%;
+  padding: $gutter;
+  display: flex;
+  border-radius: 3px;
+  flex-direction: column;
+  margin-bottom: $half-gutter;
+  background: #111;
+  border: 1px solid #333;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
+  h4 {
+    margin-bottom: $gutter;
+    font-size: 18px;
+  }
+}
