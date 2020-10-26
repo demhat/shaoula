@@ -7,7 +7,6 @@ function Shaoula({ size, ...props }) {
       height={height.toString()}
       viewBox="0 0 120 42"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <g clipPath="url(#clip0)">

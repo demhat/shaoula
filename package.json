@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "svgr": "svgr icons --out-dir components/icons --icon --no-prettier --svg-props \"width=24,height=24\""
+    "svgr": "svgr icons --out-dir components/icons --icon --replace-attr-values \\\"#fff=currentColor\\\" --no-prettier --svg-props \"width=1em,height=1em\""
   },
   "keywords": [],
   "author": "",

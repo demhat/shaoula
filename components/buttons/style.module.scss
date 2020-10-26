@@ -44,14 +44,20 @@
 
 .iconButton {
   width: $finger-size;
+  max-width: $finger-size;
   height: $finger-size;
+  max-height: $finger-size;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: $half-gutter;
   border-radius: 50%;
   background: #111;
   border: 1px solid #333;
   cursor: pointer;
   color: $c-text;
+
+  & svg {
+    font-size: 15px;
+  }
 }
