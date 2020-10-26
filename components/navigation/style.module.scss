@@ -29,7 +29,6 @@
 .nav {
   align-items: center;
   height: $finger-size;
-  display: none;
   @include mq("md") {
     display: flex;
   }

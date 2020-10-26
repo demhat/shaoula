@@ -11,7 +11,6 @@ import { Cross } from '../icons'
 import Nav from './nav'
 
 function Drawer({ children, active, onClick, ...props }) {
-  const router = useRouter()
   return (
     <div
       className={cn(styles.drawer, active && styles.drawerActive)}
