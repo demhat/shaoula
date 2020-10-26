@@ -41,6 +41,7 @@ function HomePage() {
     axios.post('/api/contact', formData).then(
       (res) => {
         if (res.status === 200) {
+          setText('')
           toastr.success('We got your mail!')
         }
       },

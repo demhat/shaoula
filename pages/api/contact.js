@@ -11,11 +11,7 @@ export default (req, res) => {
       auth: {
         user: process.env.EMAIL_EMAIL, // generated ethereal user
         pass: process.env.EMAIL_PASSWORD // generated ethereal password
-      },
-      tls: {
-        rejectUnauthorized: false
-      },
-      debug: true
+      }
     })
 
     const mailOptions = {
