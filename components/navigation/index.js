@@ -2,20 +2,17 @@ import React, { Fragment, useState } from 'react'
 import Shaoula from '../shaoula'
 import Link from 'next/link'
 import cn from 'classnames'
-import { useRouter } from 'next/router'
 
 import useWindowSize from 'hooks/useWindowSize'
 import styles from './style.module.scss'
 
-import CONST, { NAVS } from 'constants/index'
-import Button from '../buttons'
+import CONST from 'constants/index'
 import { Bars } from '../icons'
 import IconButton from '../buttons/icon'
 import Drawer from './drawer'
 import Nav from './nav'
 
 function Navbar() {
-  const router = useRouter()
   const size = useWindowSize()
   const [drawer, setDrawer] = useState(false)
   return (
