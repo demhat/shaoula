@@ -1,0 +1,13 @@
+@import "styles/variables";
+
+.alert {
+  width: 100%;
+  line-height: $finger-size;
+  background: gray;
+  color: $c-text;
+  border-radius: 3px;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  margin-bottom: $gutter;
+  font-weight: 600;
+}

@@ -8,6 +8,7 @@ import Button from '../buttons'
 import Shaoula from '../shaoula'
 import IconButton from '../buttons/icon'
 import { Cross } from '../icons'
+import Nav from './nav'
 
 function Drawer({ children, active, onClick, ...props }) {
   const router = useRouter()
@@ -21,16 +22,7 @@ function Drawer({ children, active, onClick, ...props }) {
           <Cross />
         </IconButton>
         <Shaoula size={1.5} />
-        <nav className={styles.drawerNav}>
-          {NAVS.map((nav) => {
-            const active = router.pathname === nav.href
-            return (
-              <Button key={nav.title} href={nav.href} {...nav.props}>
-                {nav.title}
-              </Button>
-            )
-          })}
-        </nav>
+        <Nav />
       </div>
     </div>
   )

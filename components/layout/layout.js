@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
 
-import Index from '../navigation'
+import Navbar from '../navigation'
 
 class Layout extends Component {
   render() {
@@ -14,7 +14,7 @@ class Layout extends Component {
             content="width=device-width, initial-scale=1.0"
           />
         </Head>
-        <Index />
+        <Navbar />
         <div className={`container ${this.props?.centered ? 'centered' : ''}`}>
           {this.props.children}
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import 'node_modules/alertifyjs/build/css/alertify.min.css'
 
 import 'styles/variables.scss'
 import 'styles/formalize.scss'

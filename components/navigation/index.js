@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import Shaoula from '../shaoula'
 import Link from 'next/link'
 import cn from 'classnames'
@@ -12,13 +12,12 @@ import Button from '../buttons'
 import { Bars } from '../icons'
 import IconButton from '../buttons/icon'
 import Drawer from './drawer'
+import Nav from './nav'
 
-function Index() {
+function Navbar() {
   const router = useRouter()
   const size = useWindowSize()
   const [drawer, setDrawer] = useState(false)
-  console.log(drawer)
-
   return (
     <div className={styles.navbar}>
       <div className={cn('container', styles.container)}>
@@ -28,32 +27,18 @@ function Index() {
           </a>
         </Link>
         {size.width > CONST.MD ? (
-          <nav className={styles.nav}>
-            {NAVS.map((nav) => {
-              const active = router.pathname === nav.href
-              return (
-                <Button
-                  key={nav.title}
-                  href={nav.href}
-                  className={active && 'active'}
-                  {...nav.props}
-                >
-                  {nav.title}
-                </Button>
-              )
-            })}
-          </nav>
+          <Nav />
         ) : (
-          <div>
+          <Fragment>
             <IconButton onClick={() => setDrawer(!drawer)}>
               <Bars />
             </IconButton>
             <Drawer active={drawer} onClick={() => setDrawer(!drawer)} />
-          </div>
+          </Fragment>
         )}
       </div>
     </div>
   )
 }
 
-export default Index
+export default Navbar
