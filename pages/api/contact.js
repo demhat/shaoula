@@ -16,14 +16,6 @@ export default (req, res) => {
       }
     })
 
-    transporter.verify(function (error, success) {
-      if (error) {
-        res.send(error)
-      } else {
-        res.send(success)
-      }
-    })
-
     const mailOptions = {
       from: `${name + ' ' + surname} <${email}>`, // sender address
       to: process.env.EMAIL_EMAIL, // list of receivers
@@ -34,7 +26,7 @@ export default (req, res) => {
       if (error) {
         res.send(error)
       }
-      res.send('Message sent: %s', info.messageId)
+      res.status(200)
       res.end('Email has been sent')
     })
   } else {
