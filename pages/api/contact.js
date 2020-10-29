@@ -1,4 +1,5 @@
 import sgMail from '@sendgrid/mail'
+import nodemailer from 'nodemailer'
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
