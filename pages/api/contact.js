@@ -1,4 +1,6 @@
-import nodemailer from 'nodemailer'
+import sgMail from '@sendgrid/mail'
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default (req, res) => {
   if (req.method === 'POST') {
@@ -22,17 +24,11 @@ export default (req, res) => {
     }
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        return console.log(error)
+        res.send(error)
       }
-      console.log('Message sent: %s', info.messageId)
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
-
+      res.send('Message sent: %s', info.messageId)
       res.end('Email has been sent')
     })
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.send('Success')
   } else {
     res.send('Contact')
   }
