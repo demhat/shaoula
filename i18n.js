@@ -10,6 +10,6 @@ module.exports = new NextI18Next({
     tr: 'tr'
   },
   localePath: path.resolve('./public/static/locales'),
-  serverLanguageDetection: false,
+  serverLanguageDetection: true,
   browserLanguageDetection: true
 })
