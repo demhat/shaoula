@@ -15,6 +15,7 @@ import Nav from './nav'
 function Navbar() {
   const size = useWindowSize()
   const [drawer, setDrawer] = useState(false)
+  const hamburgerMenu = size.width < CONST.MD
   return (
     <div className={styles.navbar}>
       <div className={cn('container', styles.container)}>
@@ -23,8 +24,8 @@ function Navbar() {
             <Shaoula />
           </a>
         </Link>
-        {size.width & (size.width > CONST.MD) && <Nav />}
-        {size.width & (size.width < CONST.MD) && (
+        {!hamburgerMenu && <Nav />}
+        {hamburgerMenu && (
           <Fragment>
             <IconButton onClick={() => setDrawer(!drawer)}>
               <Bars />
