@@ -9,8 +9,8 @@ module.exports = {
     localeSubpaths
   },
   i18n: {
-    locales: ['en-US', 'fr', 'nl-NL'],
-    defaultLocale: 'en-US'
+    locales: ['en', 'tr'],
+    defaultLocale: 'en'
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
