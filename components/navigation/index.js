@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import Shaoula from '../shaoula'
-import Link from 'next/link'
 import cn from 'classnames'
+import { Link } from 'i18n'
 
 import useWindowSize from 'hooks/useWindowSize'
 import styles from './style.module.scss'

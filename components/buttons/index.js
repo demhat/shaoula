@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import cn from 'classnames'
+import { Link } from 'i18n'
 
 import styles from './style.module.scss'
 import './style.module.scss'

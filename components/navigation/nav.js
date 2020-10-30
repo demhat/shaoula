@@ -1,12 +1,13 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import { withTranslation } from 'i18n'
 
 import styles from './style.module.scss'
 import { NAVS } from '../../constants'
 
 import Button from '../buttons'
 
-function Nav({ ...props }) {
+function Nav({ t, ...props }) {
   const router = useRouter()
   return (
     <nav className={styles.nav} {...props}>
@@ -19,7 +20,7 @@ function Nav({ ...props }) {
             className={active && 'active'}
             {...nav.props}
           >
-            {nav.title}
+            {t(nav.title)}
           </Button>
         )
       })}
@@ -27,4 +28,4 @@ function Nav({ ...props }) {
   )
 }
 
-export default Nav
+export default withTranslation('common')(Nav)

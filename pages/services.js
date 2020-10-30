@@ -1,24 +1,29 @@
 import React from 'react'
 import Head from 'next/head'
+import { withTranslation } from 'i18n'
 
 import Layout from '../components/layout/layout'
 import Card from '../components/cards/card'
 import Col from '../components/layout/col'
 import Flexbox from '../components/layout/flexbox'
 
-function HomePage() {
+function Services({ t }) {
   const services = [
     {
-      title: 'Web Services',
-      description: 'We are making professional websites for you'
+      title: t('Web'),
+      description: t('Web Description')
     },
     {
-      title: 'SEO Services',
-      description: 'We are making professional websites for you'
+      title: t('SEO'),
+      description: t('SEO Description')
     },
     {
-      title: 'Mobile App Services',
-      description: 'We are making professional websites for you'
+      title: t('MobileApp'),
+      description: t('MobileApp Description')
+    },
+    {
+      title: t('Corporate'),
+      description: t('Corporate Description')
     }
   ]
   return (
@@ -33,17 +38,11 @@ function HomePage() {
               <h4>{service.title}</h4>
               <code>{service.description}</code>
             </Card>
-            {/*asd*/}
           </Col>
         ))}
       </Flexbox>
-      {/*<Col>
-        <Button href="/getOffer" button>
-          Get Offer
-        </Button>
-      </Col>*/}
     </Layout>
   )
 }
 
-export default HomePage
+export default withTranslation('services')(Services)
