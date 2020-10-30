@@ -7,7 +7,11 @@ import Button from './index'
 
 function IconButton({ className, children, ...props }) {
   return (
-    <Button className={cn(styles.iconButton, className)} {...props}>
+    <Button
+      className={cn(styles.iconButton, className)}
+      aria-label="icon-button"
+      {...props}
+    >
       {children}
     </Button>
   )

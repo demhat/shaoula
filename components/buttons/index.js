@@ -8,7 +8,7 @@ import './style.module.scss'
 function LinkButton({ href, children, className, button, ...props }) {
   const classnames = button ? '' : styles.linkButton
   return (
-    <Link href={href}>
+    <Link href={href} lng={href.split('/')[0] || 'en'}>
       <a className={cn(classnames, className)} {...props}>
         {children}
       </a>

@@ -20,4 +20,4 @@ const HomePage = ({ t }) => {
   )
 }
 
-export default withTranslation('common')(HomePage)
+export default withTranslation()(HomePage)

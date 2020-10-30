@@ -17,13 +17,16 @@ function Navbar() {
   const [drawer, setDrawer] = useState(false)
   const hamburgerMenu = size.width < CONST.MD
   return (
-    <div className={styles.navbar}>
+    <header className={styles.navbar}>
       <div className={cn('container', styles.container)}>
         <Link href="/">
-          <a>
+          <a title="Shaoula">
             <Shaoula />
           </a>
         </Link>
+        <a className={styles.skipLink} href="#main">
+          Skip to main
+        </a>
         {!hamburgerMenu && <Nav />}
         {hamburgerMenu && (
           <Fragment>
@@ -34,7 +37,7 @@ function Navbar() {
           </Fragment>
         )}
       </div>
-    </div>
+    </header>
   )
 }
 
