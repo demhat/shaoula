@@ -23,9 +23,8 @@ function Navbar() {
             <Shaoula />
           </a>
         </Link>
-        {size.width > CONST.MD ? (
-          <Nav />
-        ) : (
+        {size.width > CONST.MD && <Nav />}
+        {size.width < CONST.MD && (
           <Fragment>
             <IconButton onClick={() => setDrawer(!drawer)}>
               <Bars />
