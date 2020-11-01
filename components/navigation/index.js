@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react'
 import Shaoula from '../shaoula'
 import cn from 'classnames'
 import { Link } from 'i18n'
+import Image from 'next/image'
 
 import useWindowSize from 'hooks/useWindowSize'
 import styles from './style.module.scss'
@@ -20,7 +21,7 @@ function Navbar() {
     <header className={styles.navbar}>
       <div className={cn('container', styles.container)}>
         <Link href="/">
-          <a title="Shaoula">
+          <a title="Shaoula" tabIndex="0">
             <Shaoula />
           </a>
         </Link>
