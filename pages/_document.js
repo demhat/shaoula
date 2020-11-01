@@ -81,7 +81,7 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/assets/shaoula/favicon-16x16.png"
           />
-          <link rel="manifest" href="/public/assets/shaoula/manifest.json" />
+          <link rel="manifest" href="/assets/shaoula/manifest.json" />
           <meta name="msapplication-TileColor" content="#000" />
           <meta
             name="msapplication-TileImage"
