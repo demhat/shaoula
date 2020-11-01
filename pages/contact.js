@@ -53,9 +53,6 @@ function Contact({ t }) {
   }
   return (
     <Layout>
-      <Head>
-        <title>Get Offer - Shaoula</title>
-      </Head>
       <Form onSubmit={handleSubmit}>
         <Input
           placeholder={t('Name')}

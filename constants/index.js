@@ -16,6 +16,25 @@ export const NAVS = [
   }
 ]
 
+export const SERVICES = [
+  {
+    title: 'Web',
+    description: 'Web Description'
+  },
+  {
+    title: 'SEO',
+    description: 'SEO Description'
+  },
+  {
+    title: 'MobileApp',
+    description: 'MobileApp Description'
+  },
+  {
+    title: 'Corporate',
+    description: 'Corporate Description'
+  }
+]
+
 export default {
   SM: 576,
   MD: 768,
