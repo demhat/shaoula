@@ -5,10 +5,10 @@ import { Link } from 'i18n'
 import styles from './style.module.scss'
 import './style.module.scss'
 
-function LinkButton({ href, children, className, button, ...props }) {
+function LinkButton({ href, lng, children, className, button, ...props }) {
   const classnames = button ? '' : styles.linkButton
   return (
-    <Link href={href} lng={href.split('/')[0] || 'en'}>
+    <Link href={href} lng={lng}>
       <a className={cn(classnames, className)} {...props}>
         {children}
       </a>

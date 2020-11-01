@@ -1,16 +1,18 @@
 export const NAVS = [
   {
-    title: 'About us',
-    href: '/'
+    href: '/',
+    title: 'Shaoula',
+    name: 'About us'
   },
   {
-    title: 'Services',
-    href: '/services'
+    href: '/services',
+    title: 'Shaoula | Services',
+    name: 'Services'
   },
   {
-    title: 'Get offer',
-    href: '/getOffer',
-    props: { button: true }
+    href: '/contact',
+    title: 'Shaoula | Contact',
+    name: 'Contact'
   }
 ]
 

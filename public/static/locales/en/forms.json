@@ -2,6 +2,8 @@
   "Name": "Name",
   "Surname": "Surname",
   "Email": "Email",
+  "Message": "Message",
   "About": "About your project",
-  "We got your mail!": "We got your mail!"
+  "We got your mail!": "We got your mail!",
+  "Send message": "Send message"
 }

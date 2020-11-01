@@ -2,6 +2,8 @@
   "Name": "Ad",
   "Surname": "Soyad",
   "Email": "Eposta",
+  "Message": "Mesaj",
   "About": "Projeniz hakkında",
-  "We got your mail!": "Postanızı teslim aldık!"
+  "We got your mail!": "Postanızı teslim aldık!",
+  "Send message": "Mesajı gönder"
 }

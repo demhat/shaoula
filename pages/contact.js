@@ -28,7 +28,7 @@ toastr.options = {
   hideMethod: 'fadeOut'
 }
 
-function GetOffer({ t }) {
+function Contact({ t }) {
   const [name, setName] = useState('')
   const [surname, setSurname] = useState('')
   const [email, setEmail] = useState('')
@@ -63,26 +63,21 @@ function GetOffer({ t }) {
           onChange={(e) => setName(e.target.value)}
         />
         <Input
-          placeholder={t('Surname')}
-          value={surname}
-          onChange={(e) => setSurname(e.target.value)}
-        />
-        <Input
           placeholder={t('Email')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <Textarea
-          placeholder={t('About')}
+          placeholder={t('Message')}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
         <Button type="submit" onClick={handleSubmit} disabled={!isEnabled}>
-          {t('common:Get offer')}
+          {t('forms:Send message')}
         </Button>
       </Form>
     </Layout>
   )
 }
 
-export default withTranslation('forms')(GetOffer)
+export default withTranslation('forms')(Contact)

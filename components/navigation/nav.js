@@ -7,7 +7,7 @@ import { NAVS } from '../../constants'
 
 import Button from '../buttons'
 
-function Nav({ t }) {
+function Nav({ t, i18n }) {
   const router = useRouter()
   return (
     <nav className={styles.nav}>
@@ -15,13 +15,13 @@ function Nav({ t }) {
         const active = router.pathname === nav.href
         return (
           <Button
-            title={nav.title}
-            key={nav.title}
+            title={nav.name}
+            key={nav.href}
             href={nav.href}
+            lng={i18n.language}
             className={active && 'active'}
-            {...nav.props}
           >
-            {t(nav.title)}
+            {t(nav.name)}
           </Button>
         )
       })}
