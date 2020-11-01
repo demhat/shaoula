@@ -1,3 +1,3 @@
-export { default as Bars } from './bars'
-export { default as Cross } from './cross'
+export { default as Bars } from './Bars'
+export { default as Cross } from './Cross'
 export { default as RightArrow } from './RightArrow'

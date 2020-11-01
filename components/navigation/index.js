@@ -2,12 +2,11 @@ import React, { Fragment, useState } from 'react'
 import Shaoula from '../shaoula'
 import cn from 'classnames'
 import { Link } from 'i18n'
-import Image from 'next/image'
 
 import useWindowSize from 'hooks/useWindowSize'
 import styles from './style.module.scss'
 
-import CONST from 'constants/index'
+import CONST from 'constants'
 import { Bars } from '../icons'
 import IconButton from '../buttons/icon'
 import Drawer from './drawer'
