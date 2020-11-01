@@ -4,7 +4,7 @@
   padding: 10px 20px;
   background: $c-primary;
   border-radius: 7px;
-  color: $c-text;
+  color: $c-theme;
   font-weight: bold;
   border: none;
   display: flex;
@@ -39,7 +39,7 @@
 
 .primary {
   background: $c-primary !important;
-  color: $c-text !important;
+  color: $c-theme !important;
 }
 
 .iconButton {
