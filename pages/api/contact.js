@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer'
 
 export default (req, res) => {
   if (req.method === 'POST') {
-    const { name, surname, email, text } = req.body
+    const { name, email, text } = req.body
 
     const transporter = nodemailer.createTransport({
       host: 'smtpout.secureserver.net',
@@ -15,7 +15,7 @@ export default (req, res) => {
     })
 
     const mailOptions = {
-      from: `${name + ' ' + surname} <${email}>`, // sender address
+      from: `${name} <${email}>`, // sender address
       to: process.env.EMAIL_EMAIL, // list of receivers
       subject: 'Shaoula Get Offer',
       text: text
