@@ -10,7 +10,11 @@ class Layout extends Component {
       <div>
         <Head>
           <title>Shaoula</title>
-          <meta name="description" content="Shaoula" />
+          <meta name="title" content="Shaoula" />
+          <meta
+            name="description"
+            content="We provide the website services, SEO services, mobile app services, corporate identity services you need with the newest technologies of today's world."
+          />
           <meta
             name="keywords"
             content="Shaoula, Shaoula Group, Shaoula Media, Shaoula Market, software, software solutions, freelance, website, mobile app, desktop app, HTML, CSS, Javascript, Python, PHP, Flutter, Android, iOS"
@@ -19,6 +23,32 @@ class Layout extends Component {
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
+          />
+
+          {/*Facebook*/}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://shaoula.com/" />
+          <meta property="og:title" content="Shaoula" />
+          <meta
+            property="og:description"
+            content="We provide the website services, SEO services, mobile app services, corporate identity services you need with the newest technologies of today's world."
+          />
+          <meta
+            property="og:image"
+            content="https://shoula.com/assets/shaoula/apple-icon.png"
+          />
+
+          {/*Twitter*/}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://shaoula.com/" />
+          <meta property="twitter:title" content="Shaoula" />
+          <meta
+            property="twitter:description"
+            content="We provide the website services, SEO services, mobile app services, corporate identity services you need with the newest technologies of today's world."
+          />
+          <meta
+            property="twitter:image"
+            content="https://shoula.com/assets/shaoula/apple-icon.png"
           />
         </Head>
         <Navbar />
