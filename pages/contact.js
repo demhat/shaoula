@@ -35,7 +35,7 @@ function Contact({ t }) {
   const isEnabled = name.length > 0 && email.length > 0 && text.length > 0
 
   const handleSubmit = (e) => {
-    const formData = { name, surname, email, text }
+    const formData = { name, email, text }
     e.preventDefault()
     axios.post('/api/contact', formData).then(
       (res) => {
