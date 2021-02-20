@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import axios from 'axios'
 import toastr from 'toastr'
@@ -32,9 +32,11 @@ function Contact({ t }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [text, setText] = useState('')
-  const [isEnabled, setIsEnabled] = useState(
-    name.length > 0 && email.length > 0 && text.length > 0
-  )
+  const [isEnabled, setIsEnabled] = useEffect(false)
+
+  useEffect(() => {
+    setIsEnabled(name.length > 0 && email.length > 0 && text.length > 0)
+  }, [name, email, text])
 
   const handleSubmit = (e) => {
     const formData = { name, email, text }
