@@ -7,7 +7,7 @@ export default (req, res) => {
     const transporter = nodemailer.createTransport({
       host: 'smtpout.secureserver.net',
       port: 465,
-      //secure: true, // true for 465, false for other ports
+      secure: true, // true for 465, false for other ports
       auth: {
         user: process.env.EMAIL_EMAIL, // generated ethereal user
         pass: process.env.EMAIL_PASSWORD // generated ethereal password
