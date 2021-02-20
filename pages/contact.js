@@ -29,14 +29,14 @@ toastr.options = {
 }
 
 function Contact({ t }) {
-  const [name, setName] = useState('')
+  const [inputs, setInputs] = useState({})
   const [email, setEmail] = useState('')
   const [text, setText] = useState('')
   const [isEnabled, setIsEnabled] = useEffect(false)
 
-  useEffect(() => {
+  /*  useEffect(() => {
     setIsEnabled(name.length > 0 && email.length > 0 && text.length > 0)
-  }, [name, email, text])
+  }, [name, email, text]) */
 
   const handleSubmit = (e) => {
     const formData = { name, email, text }
@@ -61,17 +61,26 @@ function Contact({ t }) {
         <Input
           placeholder={t('Name')}
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          name={'name'}
+          onChange={(e) =>
+            setInputs({ ...inputs, [e.target.name]: e.target.value })
+          }
         />
         <Input
           placeholder={t('Email')}
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name={'email'}
+          onChange={(e) =>
+            setInputs({ ...inputs, [e.target.name]: e.target.value })
+          }
         />
         <Textarea
           placeholder={t('Message')}
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          name={'text'}
+          onChange={(e) =>
+            setInputs({ ...inputs, [e.target.name]: e.target.value })
+          }
         />
         <Button type="submit" onClick={handleSubmit} disabled={!isEnabled}>
           {t('forms:Send message')}
