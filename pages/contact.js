@@ -30,11 +30,9 @@ toastr.options = {
 
 function Contact({ t }) {
   const [name, setName] = useState('')
-  const [surname, setSurname] = useState('')
   const [email, setEmail] = useState('')
   const [text, setText] = useState('')
-  const isEnabled =
-    name.length > 0 && surname.length > 0 && email.length > 0 && text.length > 0
+  const isEnabled = name.length > 0 && email.length > 0 && text.length > 0
 
   const handleSubmit = (e) => {
     const formData = { name, surname, email, text }
