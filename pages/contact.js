@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import axios from 'axios'
 import toastr from 'toastr'
@@ -29,14 +29,12 @@ toastr.options = {
 }
 
 function Contact({ t }) {
-  const [inputs, setInputs] = useState({})
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [text, setText] = useState('')
-  const [isEnabled, setIsEnabled] = useEffect(false)
-
-  /*  useEffect(() => {
-    setIsEnabled(name.length > 0 && email.length > 0 && text.length > 0)
-  }, [name, email, text]) */
+  const [isEnabled, setIsEnabled] = useState(
+    name.length > 0 && email.length > 0 && text.length > 0
+  )
 
   const handleSubmit = (e) => {
     const formData = { name, email, text }
@@ -61,26 +59,17 @@ function Contact({ t }) {
         <Input
           placeholder={t('Name')}
           value={name}
-          name={'name'}
-          onChange={(e) =>
-            setInputs({ ...inputs, [e.target.name]: e.target.value })
-          }
+          onChange={(e) => setName(e.target.value)}
         />
         <Input
           placeholder={t('Email')}
           value={email}
-          name={'email'}
-          onChange={(e) =>
-            setInputs({ ...inputs, [e.target.name]: e.target.value })
-          }
+          onChange={(e) => setEmail(e.target.value)}
         />
         <Textarea
           placeholder={t('Message')}
           value={text}
-          name={'text'}
-          onChange={(e) =>
-            setInputs({ ...inputs, [e.target.name]: e.target.value })
-          }
+          onChange={(e) => setText(e.target.value)}
         />
         <Button type="submit" onClick={handleSubmit} disabled={!isEnabled}>
           {t('forms:Send message')}
