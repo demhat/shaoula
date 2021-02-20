@@ -14,7 +14,7 @@ import Nav from './nav'
 
 function Navbar() {
   const size = useWindowSize()
-  const [drawer, setDrawer] = useState(false)
+  const [drawer, setDrawer] = useState(size.width < CONST.MD)
   const hamburgerMenu = size.width < CONST.MD
   return (
     <header className={styles.navbar}>
